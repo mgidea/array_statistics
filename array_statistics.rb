@@ -1,27 +1,54 @@
 require 'descriptive_statistics'
-
+# require 'pry'
 class ArrayStatistic
   def initialize(array)
     @array = array
   end
 
   def max
-    3
+    @array.sort.last
   end
 
    def min
-    1
+    @array.sort.first
   end
 
   def average
-    2
+    @array.reduce(0){|sum, number| sum + number} / @array.size
   end
 
-  def standard_deviation
-    (2/3)**0.5
+  def standard_dev
+    @array.standard_deviation.round(2)
   end
 
   def nth_smallest(number)
-    4
+    index = number - 1
+    @array[index]
   end
+
+  def sum
+    @array.reduce(:+)
+  end
+
+  def product
+    @array.inject(:*)
+  end
+
+  def difference
+    @array.max - @array.min
+  end
+
+  def digit_frequency
+    digits = {}
+   @array.each do |digit|
+      n = digit.to_s.length
+      unless digits.has_key?(n)
+      digits[n] = 0
+      end
+      digits[n] += 1
+    end
+  end
+
+
 end
+
