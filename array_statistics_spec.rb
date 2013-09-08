@@ -38,12 +38,10 @@ describe ArrayStatistic do
   end
 
   it  "finds and returns the (n)digit numbers in an array" do
-    ArrayStatistic.new([1,200,300,4000, 2]).digit_frequency.should
-    eql({
-      1 => 2,
-      2 => 0,
-      3 => 2,
-      4 => 1
+    ArrayStatistic.new([1,200,300,4000, 2]).digit_frequency.should eql({
+      "1" => 2,
+      "3" => 2,
+      "4" => 1
     })
 
   end

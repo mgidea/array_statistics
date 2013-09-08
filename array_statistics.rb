@@ -41,12 +41,13 @@ class ArrayStatistic
   def digit_frequency
     digits = {}
    @array.each do |digit|
-      n = digit.to_s.length
+      n = digit.to_s.length.to_s
       unless digits.has_key?(n)
       digits[n] = 0
       end
       digits[n] += 1
     end
+    digits
   end
 
 
