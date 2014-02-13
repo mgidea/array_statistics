@@ -13,7 +13,7 @@ describe ArrayStatistic do
   end
 
   it "find the average of all numbers in array" do
-    ArrayStatistic.new([1,2,3]).average.should eql(2)
+    ArrayStatistic.new([1,5,6]).average.should eql(4)
   end
 
   it "find the standard deviation of all numbers in array" do
@@ -30,11 +30,11 @@ describe ArrayStatistic do
   end
 
   it "find the product of all elements in the array" do
-    ArrayStatistic.new([1,2,3]).product.should eql(6)
+    ArrayStatistic.new([1,2,4]).product.should eql(8)
   end
 
   it "finds the difference between the highest and the lowest numbers in an array" do
-    ArrayStatistic.new([1,2,3]).difference.should eql(2)
+    ArrayStatistic.new([1,2,12]).difference.should eql(11)
   end
 
   it  "finds and returns the (n)digit numbers in an array" do

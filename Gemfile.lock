@@ -16,5 +16,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   descriptive_statistics
   rspec
